@@ -18,7 +18,7 @@ const list = document.querySelector("ul.gallery");
 const makeListImages = ({ url, alt }) => {
   list.insertAdjacentHTML(
     "beforeend",
-    `<li class = 'flexx-container'><img src = ${url} alt = ${alt} /></li>`
+    `<li class = 'flexx-container'><img src = ${url} alt = '${alt}' /></li>`
   );
 };
 
