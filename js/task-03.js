@@ -16,10 +16,13 @@ const images = [
 const list = document.querySelector("ul.gallery");
 
 const makeListImages = ({ url, alt }) => {
-  list.insertAdjacentHTML(
-    "beforeend",
-    `<li class = 'flexx-container'><img src = ${url} alt = '${alt}' /></li>`
-  );
+  return `<li class="flexx-container">
+        <img
+          src="${url}",
+          alt="${alt}"
+        />
+      </li>`;
 };
+const listItemImages = images.map(makeListImages).join("");
 
-const listItemImages = images.map(makeListImages);
+list.insertAdjacentHTML("beforeend", listItemImages);
